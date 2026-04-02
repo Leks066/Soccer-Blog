@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <!-- <link rel="stylesheet" href="styles/style.css"> -->
+</head>
+<style> 
+*{
+  padding: 0;
+  margin: 0;
+}
+   
+body {
+  min-height: 100vh;
+  background-color: rgb(177, 226, 0);
+  color: rgb(177, 226, 0);
+  margin-bottom: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* NAV STYLE */
+
+nav {
+  background-color: rgb(177, 226, 0);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);  
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+nav h2 {
+  font-size: 20px;
+}
+
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav li {
+  height: 50px;
+}
+
+nav a {
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+nav li:first-child {
+  margin-right: auto;
+} 
+
+.nav-link.active {
+  opacity: 0.3;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 350px;
+  z-index: 999; 
+  background-color: rgb(29, 29, 29);
+  /* backdrop-filter: blur(10px); */
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+} 
+
+.sidebar li {
+  width: 100%;
+  font-size: 50px;
+  font-weight: bold;
+  margin: 25px;
+  margin-left: 50px;
+}
+
+.sidebar a {
+  width: 100%;
+  color: #b1e200;
+}
+
+.menu-button {
+  display: none;
+}
+
+/* ABOUT STYLE */
+.about-container {
+  background-color: rgb(29, 29, 29);
+  display: flex;
+  justify-content: space-between;  
+  margin-top: 50px;
+}
+
+.left-about-flex {
+  padding: 50px;
+}
+
+.left-about-flex h3 {
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: -2px;
+}
+
+.left-about-flex p {
+  margin: 25px;
+  margin-left: 0;
+  font-size: 17.6px;
+  width: 430px;
+  line-height: 25px;
+}
+
+/* FOOTER STYLING */
+
+.footer-div {
+  margin-top: 10px;
+  background-color: rgb(29, 29, 29);
+  color: rgb(177, 226, 0);
+  padding: 50px;
+}
+
+.footer-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-div ul {
+  list-style: none;
+  padding: 15px;
+  line-height: 35px;
+  font-size: 18px;
+}
+
+.footer-div a {
+  text-decoration: none;
+  color: rgb(177, 226, 0);
+}
+
+.left-footer-flex .social-container{
+  margin: 30px 11px;
+}
+
+.right-footer-flex h2 {
+  padding-bottom: 10px;
+  font-size: 45px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.right-footer-flex {
+  padding: 10px;
+  
+}
+
+.right-footer-flex form {
+  font-size: 18px;
+}
+
+.right-footer-flex input{
+  margin-bottom: 10px;
+}
+
+.right-footer-flex .form-email {
+  background-color: rgb(51, 53, 27);
+  border: 1px solid rgb(177, 226, 0);
+  padding: 10px;
+  width: 480px;
+  color: #b1e200;
+  font-size: 18px;
+  border-radius: 30px;
+  margin-top: 10px;
+  margin-bottom: 20px;  
+}
+
+.right-footer-flex .form-email:hover {
+  background-color: rgb(68, 71, 36);
+}
+
+.submit-form {
+  background-color: rgb(29, 29, 29);
+  border: 3px solid rgb(177, 226, 0);
+  padding: 13px;
+  width: 510px;
+  border-radius: 30px;
+  color: rgb(177, 226, 0);
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.9;
+}
+
+.submit-form:hover {
+  background-color: rgb(177, 226, 0);
+  color: black;
+  /* font-weight: 900; */
+  font-size: 20px;
+}
+
+.footer-logo {
+  font-size: 115px;
+  text-align: center;
+}
+
+/* MEDIA SCREEN */
+@media(max-width: 820px) {
+  .hideOnMobile {
+    display: none;
+  }
+  .menu-button {
+    display: block;
+  }
+  .header-background {
+    width: 100%;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .nav-link.active {
+    opacity: 0.4;
+  }
+
+  .about-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .right-about-flex img {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .left-about-flex {
+    padding: 30px;
+  }
+
+  .left-about-flex h3 {
+    font-size: 30px;
+  }
+
+  .left-about-flex p {
+    font-size: 16px;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .footer-flex {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .right-footer-flex,
+  .left-footer-flex {
+    width: 85%;
+  }
+
+  .left-footer-flex ul,
+  .list,
+  .social-container{
+    margin-bottom: -25px;
+    font-weight: 500;
+
+  }
+
+  .footer-flex li {
+    font-size: 17px;
+  }
+
+  .footer-flex h2 {
+    font-size: 32px;
+  }
+
+  .submit-form,
+  .right-footer-flex .form-email  {
+    width: 300px;
+    margin-bottom: 0;
+  }
+
+  .footer-logo {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 2px;
+    margin-bottom: 5px;
+  }
+
+} 
+
+@media(max-width: 400px) {
+  .sidebar {
+    width: 100%;
+  }
+
+  .submit-form,
+  .right-footer-flex .form-email  {
+    width: 270px;
+    margin-bottom: 0;
+  }
+}
+
+@media(max-width: 1024px) {
+  body {
+    width: 100%;
+  }
+
+  /* .hideOnMobile {
+    display: flex;
+  } */
+  /* .menu-button {
+    display: flex;
+  } */
+
+  .about-container {
+    width: 100%;
+    display: flex;  
+  }
+
+}
+
+
+</style>
+<body>
+  <nav>
+    <ul class="sidebar">
+      <li onclick="hideSidebar()"><a href="#">
+        <img style="margin-left: 180px; width: 40px;" src="Images/close.png" alt="">
+      </a></li>
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="blog.html" class="nav-link">Blog</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <ul>
+      <li><a href="index.html">
+        <h2>Globe Goal</h2>
+      </a></li>
+      <!-- <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Blog</a></li> -->
+      <li onclick="showSidebar()" class="hideOnMobile"><a href="#">
+        <h2>Menu</h2>
+      </a></li>
+      <li class="menu-button" onclick="showSidebar()" ><a href="#">
+        <img src="Images/menu.png" alt="">
+      </a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <div class="about-container">
+      <div class="left-about-flex">
+        <h3>
+          Explore Our Passion
+        </h3>
+
+        <p>
+          At Goal Globe, our passion for soccer fuels everything we do. 
+          We are committed to bringing fans the very best in soccer content, 
+          whether you're following your favorite team, player, or the global 
+          soccer scene. Our mission is to provide insightful analysis that goes 
+          beyond the headlines, offering a deeper <br> understanding of the game and 
+          the stories that shape it. From expert breakdowns to trending topics, 
+          we keep you informed and connected to the world of soccer.
+        </p>
+        <p>
+          We focus on delivering exclusive player insights that give you a unique 
+          perspective on the stars of the game. Through in-depth profiles and expert 
+          commentary, we offer fans a closer look at the lives, journeys, and performances 
+          of soccer’s biggest names. Our team of writers and analysts work to keep you in 
+          the know, with content that enhances your appreciation for the sport’s intricate 
+          details and exciting moments.
+        </p>
+      </div>
+      <div class="right-about-flex">
+        <img src="Images/about-img.jpg" alt="">
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-div">
+      <div class="footer-flex">
+        <div class="left-footer-flex">
+          <ul>
+            <li>123-456-7890</li>
+            <a href="#">
+              <li>
+                info@mysite.com
+              </li>
+            </a>
+            <li>
+              500 Terry Francine St. San francisco, CA 94158
+            </li>
+          </ul>
+
+          <div class="list">
+            <ul>
+              <a href="#">
+                <li>
+                  Privacy Policy
+                </li>
+              </a>
+
+              <a href="#">
+                <li>
+                  Accessibility Statement
+                </li>
+              </a>
+            </ul>
+          </div>
+
+          <div class="social-container">
+            <a href="#">
+              <img src="Images/Instagram.png" alt="">
+            </a>
+            <a href="#">
+              <img src="Images/Facebook.png" alt="">
+            </a>
+            <a href="#">
+              <img src="Images/YouTube.png" alt="">
+            </a>
+            <a href="#">
+              <img src="Images/TikTok.png" alt="">
+            </a>
+          </div>
+        </div>
+
+        <div class="right-footer-flex">
+          <h2>
+            Stay Connected!
+          </h2>
+
+          <form>
+            <label for="Email">
+              Email
+            </label><br>
+            <input type="email" name="Email" class="form-email"><br>
+
+            <input type="checkbox" value="Javascript" class="checkbox">
+            <label for="Javascript"> 
+              I agree to terms and conditions
+            </label><br>
+
+            <input type="submit" 
+              value="Submit" class="submit-form">
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-logo">
+      <a href="index.html">
+        <h1>
+          Goal Globe
+        </h1>
+      </a>
+    </div>
+
+    <p>
+      © 2035 by Goal Globe. Powered and secured by <Span style="text-decoration: underline;">
+        <a href="#">
+          Timileyin
+        </a>
+      </Span>
+    </p>
+    </div>    
+  </footer>
+  
+  <script>
+    function showSidebar() {
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display='flex'
+    }
+    function hideSidebar() {
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display='none'
+    }
+
+    const navLinks = document.querySelectorAll('.nav-link');
+    let currentPage = window.location.pathname.split('/').pop();
+    if (currentPage === '') {
+      currentPage = 'index.html';
+    }
+    navLinks.forEach(link => {
+      const linkPage = link.getAttribute('href');
+
+      if (linkPage === currentPage) {
+        link.classList.add('active');
+      }
+    });
+    
+  </script>  
+</body>
+</html>

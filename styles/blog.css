@@ -1,0 +1,424 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+   
+body {
+  min-height: 100vh;
+  background-color: rgb(177, 226, 0);
+  margin-bottom: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+  background-color: rgb(177, 226, 0);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);  
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1000;  
+}
+
+nav h2 {
+  font-size: 20px;
+}
+
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav li {
+  height: 50px;
+}
+
+nav a {
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+nav li:first-child {
+  margin-right: auto;
+} 
+
+.nav-link.active {
+  opacity: 0.3;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 350px;
+  z-index: 999; 
+  background-color: rgb(29, 29, 29);
+  /* backdrop-filter: blur(10px); */
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+} 
+
+.sidebar li {
+  width: 100%;
+  font-size: 50px;
+  font-weight: bold;
+  margin: 25px;
+  margin-left: 50px;
+}
+
+.sidebar a {
+  width: 100%;
+  color: #b1e200;
+}
+
+.menu-button {
+  display: none;
+}
+
+/* BLOG CONTENT STYLING */
+.container {
+  margin-top: 50px;
+  background-color: rgb(29, 29, 29);
+  padding: 30px 130px;
+}
+.container h1 {
+  color: rgb(177, 226, 0);
+  font-size: 35px;
+  font-weight: 900;
+  padding: 20px 30px;
+  margin-bottom: 50px;
+}
+
+.post-content-flex {
+  background-color:  rgb(177, 226, 0);
+  /* padding: 4px; */
+  padding-bottom: 0;
+  display: flex;
+  color: black;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.post-content-flex a{
+  text-decoration: none;
+}
+
+.post-content-flex img {
+  width: 480px;
+  height: 370px;
+  margin: 4px;  
+  margin-bottom: 0;
+}
+
+.post-container a {
+  text-decoration: none;
+}
+
+.right-post-flex {
+  padding: 40px;
+  opacity: 0.8;
+  padding-bottom: 0;
+  width: 480px;
+}
+
+.right-post-flex a:hover {
+  opacity: 0.65;
+}
+
+.right-post-flex h4 {
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 30px;
+  width: 450px;
+  margin-bottom: 10px;
+  color: rgb(20, 20, 20);
+}
+
+.right-post-flex p {
+  font-size: 18px;
+  width: 480px;
+  line-height: 23px;
+  margin-bottom: 100px;
+  color: rgb(20, 20, 20);
+}
+
+.right-post-flex .time-read {
+  font-size: 12px;
+  margin-bottom: 13px;
+}
+
+.border-div {
+  border-bottom: 0.5px solid rgb(156, 156, 156);
+  width: 500px; 
+  margin-bottom: 8px;
+}
+
+.comment-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
+
+.left-comment-flex img {
+  width: 20px;
+  height: 20px;
+}
+.left-comment-flex {
+  display: flex;
+}
+
+.comments p{
+  font-size: 12px;
+}
+
+.action.like .like-heart {
+  display: inline-block;
+  color: #f60404;
+}
+
+.action.like .unlike-heart {
+  display: none;
+}
+
+.action .like-heart {
+  display: none;
+} 
+
+.main-content {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.like-container {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+/* FOOTER STYLING */
+.footer-div {
+  margin-top: 10px;
+  background-color: rgb(29, 29, 29);
+  color: rgb(177, 226, 0);
+  padding: 50px;
+}
+
+.footer-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-div ul {
+  list-style: none;
+  padding: 15px;
+  line-height: 35px;
+  font-size: 18px;
+}
+
+.footer-div a {
+  text-decoration: none;
+  color: rgb(177, 226, 0);
+}
+
+.left-footer-flex .social-container{
+  margin: 30px 11px;
+}
+
+.right-footer-flex h2 {
+  padding-bottom: 10px;
+  font-size: 45px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.right-footer-flex {
+  padding: 10px;
+  
+}
+
+.right-footer-flex form {
+  font-size: 18px;
+}
+
+.right-footer-flex input{
+  margin-bottom: 10px;
+}
+
+.right-footer-flex .form-email {
+  background-color: rgb(51, 53, 27);
+  border: 1px solid rgb(177, 226, 0);
+  padding: 10px;
+  width: 480px;
+  color: #b1e200;
+  font-size: 18px;
+  border-radius: 30px;
+  margin-top: 10px;
+  margin-bottom: 20px;  
+}
+
+.right-footer-flex .form-email:hover {
+  background-color: rgb(68, 71, 36);
+}
+
+.submit-form {
+  background-color: rgb(29, 29, 29);
+  border: 3px solid rgb(177, 226, 0);
+  padding: 13px;
+  width: 510px;
+  border-radius: 30px;
+  color: rgb(177, 226, 0);
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.9;
+}
+
+.submit-form:hover {
+  background-color: rgb(177, 226, 0);
+  color: black;
+  font-size: 20px;
+}
+
+.footer-logo {
+  font-size: 115px;
+  text-align: center;
+}
+
+/* MEDIA SCREEN */
+
+@media(max-width: 800px) {
+  .hideOnMobile {
+    display: none;
+  }
+  .menu-button {
+    display: block;
+  }
+
+  /* html, body {
+    overflow-x: hidden;
+  } */
+
+  .sidebar {
+    width: 100%;
+  }
+
+  html,body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0;
+  }
+
+  .nav-link.active {
+    opacity: 0.4;
+  }
+
+  .post-container {
+    background-color: #b1e200;
+  }
+
+  .post-content-flex {
+    display: flex;
+    flex-direction: column;
+    background: none;
+    
+  }
+
+  .post-content-flex img {
+    width: 100%;
+    height: 40vh;
+    margin: 0;
+  }
+
+  .right-post-flex {
+    width: 100%;
+  }
+
+  .right-post-flex h4 {
+    width: 80%;
+    font-size: 28px;
+  }
+
+  .right-post-flex p {
+    width: 85%;
+    margin-bottom: 30px;
+    /* font-size: 18px; */
+  }
+
+  .comments {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .comments .border-div {
+    margin-top: 30px;
+    width: 85%;
+    border-bottom: 0.5px solid rgb(63, 62, 62);
+    
+  }
+
+  .comment-flex {
+    width: 80%;
+    place-items: center;
+  }
+
+  .footer-flex {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .right-footer-flex,
+  .left-footer-flex {
+    width: 85%;
+  }
+
+  .left-footer-flex ul,
+  .list,
+  .social-container{
+    margin-bottom: -25px;
+    font-weight: 500;
+
+  }
+
+  .footer-flex li {
+    font-size: 17px;
+  }
+
+  .footer-flex h2 {
+    font-size: 32px;
+  }
+
+  .submit-form,
+  .right-footer-flex .form-email  {
+    width: 300px;
+    margin-bottom: 0;
+  }
+
+  .footer-logo {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 2px;
+    margin-bottom: 5px;
+  }
+} 
+
+
+@media(max-width: 400px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+

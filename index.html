@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soccer Blog</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<style> 
+
+</style>
+<body>
+  <nav>
+    <ul class="sidebar">
+      <li onclick="hideSidebar()"><a href="#">
+        <img style="margin-left: 180px; width: 40px;" src="Images/close.png" alt="">
+      </a></li>
+      <li>
+        <a href="index.html" class="nav-link">Home</a>
+      </li>
+      <li>
+        <a href="about.html" class="nav-link">About</a>
+      </li>
+      <li>
+        <a href="blog.html" class="nav-link">Blog</a>
+      </li>
+      <li>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </li>
+    </ul>
+    <ul>
+      <li><a href="index.html">
+        <h2>Globe Goal</h2>
+      </a></li>
+      <!-- <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Blog</a></li> -->
+      <li onclick="showSidebar()" class="hideOnMobile"><a href="#">
+        <h2>Menu</h2>
+      </a></li>
+      <li class="menu-button" onclick="showSidebar()" ><a href="#">
+        <img src="Images/menu.png" alt="">
+      </a></li>
+    </ul>
+  </nav>
+
+  <div class="header-background">
+    <div class="header-content">
+      <h1>
+        All About The Game
+      </h1>
+      <p>
+        Welcome to Goal Globe, your go-to source for the lastest Soccer
+        news, analysis, and insights from <br> around the world
+      </p>
+      </div> 
+      <a href="blog.html">
+        <button class="explore-btn">
+          Explore Now
+        </button>          
+      </a>   
+    </div>      
+  </div>    
+
+  <section>
+    <div class="container-about">
+      <div class="right-container-about">
+        <img src="Images/post.jpeg" alt=""> 
+      </div>
+      <div class="left-container-about">
+        <h3>
+          About Us
+        </h3>
+        <p>
+          At Goal Globe, we are dedicated to providing a platform for
+           soccer enthusiasts to engage with the game they love. 
+           Our mission is to deliver high-quality content that covers
+           everything soccer-related, from match highlights to player interviews.
+        </p>
+      </div>
+    </div>    
+  </section>
+
+  <section>
+    <div class="blog-container">
+      <div class="blog-header">
+        <h2>
+          Blog
+        </h2>
+        <a href="blog.html">
+          <button>
+            Read More
+          </button>
+        </a>
+      </div>
+
+      <div class="blog-card">
+        <div class="card-content">
+          <img src="Images/player-ball.webp" alt="">
+        
+          <a href="01-post.html">
+            <h4>
+              Ultimate Guide to Soccer Transfers: 
+              Latest News and Rumors
+            </h4>
+            <p>
+              Soccer fans around the world are always keeping a close 
+              eye on the latest news and rumors in the world of soccer
+              transfers. Whether it's... <!--a star player moving to a new club
+              or a young talent being scouted by top teams, the transfer 
+              market never fails to generate excitement and speculation.
+            </p> -->
+          </a>
+        </div>        
+         
+        <div class="card-content">
+          <img src="Images/ball.webp" alt="">
+
+          <a href="02-post.html">
+            <h4>
+              In-Depth Analysis: 
+              Key Players Shaping the Future of Soccer
+            </h4>
+            <p>
+              Soccer, known as one of the most popular sports 
+              worldwide, continues to captivate audiences with 
+              its thrilling matches, talented players,... <!-- and 
+              dedicated fans. As the sport evolves, key 
+              players have emerged, shaping the future of 
+              soccer in remarkable ways. In this in-depth 
+              analysis, we delve into the individuals who are 
+              making significant contributions to the game's 
+              growth and evolution.-->
+            </p>
+          </a>          
+        </div>
+        <div class="card-content">
+          <img src="Images/players.webp" alt="">
+          <a href="03-post.html">
+            <h4>
+              Top 10 Soccer Teams to Watch in 2021
+            </h4>
+            <p>
+              Soccer enthusiasts around the globe are always 
+              on the lookout for the next big thing in the 
+              world of football. With the start of a new... <!--year, 
+              it's the perfect time to take a closer look at 
+              some of the top soccer teams that are poised to 
+              make waves in 2021. From legendary clubs with a 
+              rich history to up-and-coming teams with a 
+              promising future, the upcoming year is sure to 
+              be an exciting one for fans everywhere.-->
+            </p>
+          </a>          
+        </div>  
+      </div>
+
+      <div class="query-container">
+        <h3>
+          Faq
+        </h3>
+        <div class="query-content">
+          <div class="right-query">
+            <h4>
+              Common Queries Answered
+            </h4>
+            <p>
+              Here are some answers to frequently asked questions
+              to help you better understand Goal Globe and what 
+              we offer.
+            </p>
+          </div>
+
+          <div class="left-query-grid">  
+            <div class="left-query-contents">
+              <img class="abstract" src="Images/abstract.png" alt="">           
+              <div class="left-query-flex">               
+                  <h4>
+                    Content Availability
+                  </h4>                   
+                <p>
+                  Our content is updated daily to ensure you 
+                  receive the most relevant and up-to-date 
+                  soccer news and analysis.
+                </p>
+              </div>              
+            </div>
+
+            <div class="left-query-contents fadeUp">
+              <img style="margin-bottom: 50px;" class="abstract" src="Images/OIP.png" alt="">           
+              <div class="left-query-flex">               
+                  <h4 style="color: white;">
+                    Subscription Benefits
+                  </h4>                   
+                <p style="color: white; font-weight: bold;">
+                  Subscribing to Goal Globe gives you access 
+                  to exclusive articles, interviews, and 
+                  behind-the-scenes coverage.
+                </p>
+              </div>               
+            </div>
+
+            <div class="left-query-contents fadeUp">
+              <img class="abstract" src="Images/abstract.png" alt="">           
+              <div class="left-query-flex">               
+                <h4>
+                  Community Engagement
+                </h4>                   
+                <p>
+                  Join our community forums to interact with other soccer 
+                  fans, share your thoughts, and engage in discussions.
+                </p>
+              </div>
+            </div>
+
+            <div class="left-query-contents fadeUp">
+              <img style="margin-bottom: 50px;" class="abstract" src="Images/OIP.png" alt="">           
+              <div class="left-query-flex">               
+                <h4 style="color: white;">
+                  Technical Support
+                </h4>                   
+                <p style="color: white; font-weight: bold;">
+                  If you encounter any technical issues or have questions 
+                  about our website, our support team is here to assist you.
+                </p>
+              </div>
+            </div>
+          </div>          
+        </div>
+      </div>
+    </div>    
+  </section>
+
+  <footer>
+    <div class="footer-div">
+      <div class="footer-flex">
+        <div class="left-footer-flex">
+          <ul>
+            <li>123-456-7890</li>
+            <a href="#">
+              <li>
+                info@mysite.com
+              </li>
+            </a>
+            <li>
+              500 Terry Francine St. San francisco, CA 94158
+            </li>
+          </ul>
+
+          <div class="list">
+            <ul>
+              <a href="#">
+                <li>
+                  Privacy Policy
+                </li>
+              </a>
+
+              <a href="#">
+                <li>
+                  Accessibility Statement
+                </li>
+              </a>
+            </ul>
+          </div>
+
+          <div class="social-container">
+            <a href="#">
+              <img src="Images/Instagram.png" alt="">
+            </a>
+            <a href="#">
+              <img src="Images/Facebook.png" alt="">
+            </a>
+            <a href="#">
+              <img src="Images/YouTube.png" alt="">
+            </a>
+            <a href="#">
+              <img src="Images/TikTok.png" alt="">
+            </a>
+          </div>
+        </div>
+
+        <div class="right-footer-flex">
+          <h2>
+            Stay Connected!
+          </h2>
+
+          <form>
+            <label for="Email">
+              Email
+            </label><br>
+            <input type="email" name="Email" class="form-email" required=""><br>
+
+            <input type="checkbox" value="Javascript" class="checkbox">
+            <label for="Javascript"> 
+              I agree to terms and conditions
+            </label><br>
+
+            <input type="submit" 
+              value="Submit" class="submit-form">
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-logo">
+      <a href="index.html">
+        <h1>
+          Goal Globe
+        </h1>
+      </a>
+    </div>
+
+    <p>
+      © 2035 by Goal Globe. Powered and secured by <Span style="text-decoration: underline;">
+        <a href="#">
+          Timileyin
+        </a>
+      </Span>
+    </p>
+    </div>    
+  </footer>
+  
+
+  
+  <script>
+    function showSidebar() {
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display='flex'
+    }
+    function hideSidebar() {
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display='none'
+    }
+
+    // const paragraphs = document.querySelectorAll(".fadeUp")
+
+    // document.addEventListener("scroll", function(){
+    //   paragraphs.forEach(paragraph) => {
+    //     if(isInView(paragraph)){
+    //       paragraph.classList.add("fadeUp--visible")
+    //     }
+    //   }
+    // })
+
+    function isInView(element) {
+      const rect = element.getBoundingClientReact(); 
+      return (
+        rect.bottom > 0 &&
+        rect.top <arguments
+          (window.innerHeight-150 || document.documentElement.
+            clientHeight - 150)
+    
+      );
+    }
+
+    const navLinks = document.querySelectorAll('.nav-link');
+    let currentPage = window.location.pathname.split('/').pop();
+    if (currentPage === '') {
+      currentPage = 'index.html';
+    }
+    navLinks.forEach(link => {
+      const linkPage = link.getAttribute('href');
+
+      if (linkPage === currentPage) {
+        link.classList.add('active');
+      }
+    });    
+    
+  </script>
+</body>
+</html>

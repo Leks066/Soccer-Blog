@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles/content.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<style>
+  
+</style>
+<body>
+  <nav>
+    <ul class="sidebar">
+      <li onclick="hideSidebar()"><a href="#">
+        <img style="margin-left: 180px; width: 40px;" src="Images/close.png" alt="">
+      </a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <ul class="nav-head">
+      <li><a href="index.html">
+        <h2>Globe Goal</h2>
+      </a></li>
+      <!-- <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Blog</a></li> -->
+      <li onclick="showSidebar()" class="hideOnMobile"><a href="#">
+        <h2>Menu</h2>
+      </a></li>
+      <li class="menu-button" onclick="showSidebar()" ><a href="#">
+        <img src="Images/menu.png" alt="">
+      </a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="content-head">
+      <a href="blog.html">
+        <h4>
+          All Posts
+        </h4>
+      </a>
+      <!-- <img src="" alt=""> -->
+    </div>
+
+    <div class="content-news">
+      <div class="profile-content">
+        <img src="Images/profile.png" alt=""><span style="margin-left: 8px;">
+          Admin
+        </span><span> &middot;
+          Mar 21
+        </span><span> &middot;
+          2 min read
+        </span>        
+      </div>
+      <h2>
+        Ultimate Guide to Soccer Transfers: Latest News and Rumors
+      </h2>
+      <p>
+        Soccer fans around the world are always keeping a close 
+        eye on the latest news and rumors in the world of soccer 
+        transfers. Whether it's a star player moving to a new club 
+        or a young talent being scouted by top teams, the transfer 
+        market never fails to generate excitement and speculation.
+      </p>
+      <img src="Images/player-ball.webp" class="news-img" alt="">
+      <p>
+        At Score Big, we understand the importance of staying up 
+        to date with all the transfer news, which is why we have 
+        compiled the ultimate guide to soccer transfers for our readers. 
+        From the biggest transfer sagas to the most recent rumors, we have 
+        you covered with all the information you need to know.
+      </p>
+      <p>
+        One of the most anticipated transfers this season is the potential 
+        move of a highly sought-after forward from a top European club to a 
+        rival team. The negotiations have been ongoing for weeks, with fans 
+        eagerly waiting for an official announcement. Will the deal go through? 
+      </p>
+      <p style="text-indent: 0;">Only time will tell.</p>
+      <p>
+        In addition to high-profile transfers, there are also plenty of rumors 
+        swirling around emerging talents and lesser-known players making waves 
+        in their respective leagues. Scouts are always on the lookout for the 
+        next big star, and our guide will keep you informed on all the potential 
+        breakthrough transfers happening in the world of soccer.
+      </p>
+      <p>
+        Whether you're a die-hard fan of a specific club or simply love the 
+        beautiful game, staying informed about soccer transfers is essential 
+        to understanding the ever-changing landscape of the sport. From transfer 
+        fees to contract details, our guide provides in-depth analysis and updates 
+        on all the latest happenings in the transfer market.
+      </p>
+      <p>
+          So, if you're looking to stay ahead of the game and impress your friends 
+        with your knowledge of soccer transfers, be sure to check out our ultimate 
+        guide to stay informed on all the latest news and rumors in the world of 
+        soccer. Score Big is your go-to destination for all things soccer, so 
+        don't miss out on the latest updates and analysis from our dedicated team 
+        of soccer enthusiasts.
+      </p>
+
+      <div class="social-news">
+            <a href="#">
+              <img src="Images/Instagram.png" alt="">
+            </a>
+            <a href="#">
+              <img src="Images/Facebook.png" alt="">
+            </a>
+            <a href="#">
+              <img src="Images/YouTube.png" alt="">
+            </a>
+            <a href="#">
+              <img src="Images/TikTok.png" alt="">
+            </a>
+          </div>
+
+          <div class="comment">
+            <div class="left-comment">
+              <div class="left-comment-flex">
+                <div>                  
+                  <span class="hideOnMobile" style="margin-right: 10px;">0 views</span>
+                  <span style="display: flex; align-items: center;"> 
+                    <img class="menu-button" src="Images/visibility.png" alt=""> 
+                    <span class="menu-button" style="margin-left: 5px;">0</span>
+                  </span>
+                </div>
+
+                <div>
+                  <span class="hideOnMobile">0 comments</span>
+                  <span style="display: flex; align-items: center;">
+                    <img class="menu-button" src="Images/chat_bubble.png" alt="">
+                    <span class="menu-button" style="margin-left: 5px;">0</span>
+                  </span>                  
+                </div>             
+              </div>
+              
+              </div>
+              <div class="right-comment">
+                <div class="like-container">
+                  <div class="action">
+                    <i class="unlike-heart fa-regular fa-heart" style="color: #bd0a0a;"></i>
+                    <i class="like-heart fa-solid fa-heart"></i>
+                  </div>
+                <div>
+                  <span>0</span>
+                </div>
+              </div>                
+            </div>
+          </div>
+        </div> 
+    </div>
+  </div>
+
+  <section>
+    <div class="recent-posts">
+      <div class="recent-post-header">
+        <p>
+          Recent Posts
+        </p>
+        <a href="blog.html">
+          <p class="view-all">
+            See all
+          </p>
+        </a>
+      </div>      
+      <div class="recent-post-flex">
+        <div class="more-post">
+          <a href="02-post.html">
+            <img src="Images/ball.webp" alt="">
+          <h3>
+            In-Depth Analysis: Key Players Shaping the...
+          </h3>
+          </a>  
+          
+         <div class="border-div"></div>
+          <div class="comments">
+            <div class="left-comment">
+              <span style="margin-right: 2px;">
+                <img src="Images/visibility.png" alt="">
+              </span>
+              <span style="margin-right: 10px;">0</span>
+              <span style="margin-right: 2px;">
+                <img src="Images/chat_bubble.png" alt="">
+              </span><span>
+                0
+              </span>
+            </div>            
+            <div class="right-comment">
+              <div class="like-container">
+                <div class="action">
+                  <i class="unlike-heart fa-regular fa-heart" style="color: #bd0a0a;"></i>
+                  <i class="like-heart fa-solid fa-heart"></i>
+                </div>
+                <div>
+                  <span>0</span>
+                </div>
+              </div>  
+            </div>
+          </div>
+        </div>
+        <div class="more-post">
+          <a href="03-post.html">
+            <img src="Images/players.webp" alt="">
+          <h3>
+            Top 10 Soccer Teams to Watch in 2021
+          </h3>
+          </a>  
+          
+          <div class="border-div"></div>
+            <div class="comments">
+              <div class="left-comment">
+                <span style="margin-right: 2px;">
+                  <img src="Images/visibility.png" alt="">
+                </span><span style="margin-right: 10px;">0</span>
+                <span style="margin-right: 2px;">
+                  <img src="Images/chat_bubble.png" alt="">
+                  </span><span>0</span>
+                </div>
+                <div class="right-comment">
+                  <div class="like-container">
+                    <div class="action">
+                      <i class="unlike-heart fa-regular fa-heart" style="color: #bd0a0a;"></i>
+                      <i class="like-heart fa-solid fa-heart"></i>
+                    </div>
+                    <div>
+                      <span>0</span>
+                    </div>
+              </div>       
+              </div>                   
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-div">
+      <div class="footer-flex">
+        <div class="left-footer-flex">
+          <ul>
+            <li>123-456-7890</li>
+            <a href="#">
+              <li>
+                info@mysite.com
+              </li>
+            </a>
+            <li>
+              500 Terry Francine St. San francisco, CA 94158
+            </li>
+          </ul>
+
+          <div class="list">
+            <ul>
+              <a href="#">
+                <li>
+                  Privacy Policy
+                </li>
+              </a>
+
+              <a href="#">
+                <li>
+                  Accessibility Statement
+                </li>
+              </a>
+            </ul>
+          </div>
+
+          <div class="social-container">
+            <a href="#">
+              <img src="Images/Instagram.png" alt="">
+            </a>
+            <a href="#">
+              <img src="Images/Facebook.png" alt="">
+            </a>
+            <a href="#">
+              <img src="Images/YouTube.png" alt="">
+            </a>
+            <a href="#">
+              <img src="Images/TikTok.png" alt="">
+            </a>
+          </div>
+        </div>
+
+        <div class="right-footer-flex">
+          <h2>
+            Stay Connected!
+          </h2>
+
+          <form>
+            <label for="Email">
+              Email
+            </label><br>
+            <input type="email" name="Email" class="form-email"><br>
+
+            <input type="checkbox" value="Javascript" class="checkbox">
+            <label for="Javascript"> 
+              I agree to terms and conditions
+            </label><br>
+
+            <input type="submit" 
+              value="Submit" class="submit-form">
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-logo">
+      <a href="index.html">
+        <h1>
+          Goal Globe
+        </h1>
+      </a>
+    </div>
+
+    <p>
+      © 2035 by Goal Globe. Powered and secured by <Span style="text-decoration: underline;">
+        <a href="#">
+          Timileyin
+        </a>
+      </Span>
+    </p>
+    </div>    
+  </footer>
+  <script>
+    function showSidebar() {
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display='flex'
+    }
+    function hideSidebar() {
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display='none'
+    }
+
+    document.querySelectorAll(".fa-heart").forEach((feedHeartObj) => {
+      feedHeartObj.addEventListener('click',(event)=>{        
+        let classList = event.target.parentElement.classList;
+            
+        var totalLikes = parseInt(event.target.parentElement.nextElementSibling.querySelector('span').innerHTML);
+        if (classList.contains('like')) {
+          totalLikes--;
+          
+        }else {
+          totalLikes++;
+        }
+        // totalLikes = (classList.contains('like'))?--totalLikes:++totalLikes       
+        event.target.parentElement.nextElementSibling.innerHTML ='<span>'+(totalLikes)+'</span>'
+        event.target.parentElement.classList.toggle("like");//add or remove the like class
+      })
+    }); 
+    
+  </script>  
+</body>
+</html>

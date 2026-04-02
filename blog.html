@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles/blog.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=chat_bubble,visibility" />
+</head>
+<body>
+  <nav>
+    <ul class="sidebar">
+      <li onclick="hideSidebar()"><a href="#">
+        <img style="margin-left: 180px; width: 40px;" src="Images/close.png" alt="">
+      </a></li>
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="blog.html" class="nav-link">Blog</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <ul>
+      <li><a href="index.html">
+        <h2>Globe Goal</h2>
+      </a></li>
+      <!-- <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Blog</a></li> -->
+      <li onclick="showSidebar()" class="hideOnMobile"><a href="#">
+        <h2>Menu</h2>
+      </a></li>
+      <li class="menu-button" onclick="showSidebar()" ><a href="#">
+        <img src="Images/menu.png" alt="">
+      </a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <div class="container">
+      <h1>
+        All Posts
+      </h1>
+      
+      <div class="post-container">
+        <div class="post-content-flex">
+          <div>
+            <img src="Images/player-ball.webp" alt="">
+          </div>
+          <div class="right-post-flex">
+            <p class="time-read">
+              2 min read
+            </p>
+            <a href="01-post.html">   
+              <h4>
+                Ultimate Guide to Soccer Transfers: 
+                Latest News and Rumors
+              </h4>
+              <p>
+                Soccer fans around the world are always keeping a 
+                close eye on the latest news and rumors in the world 
+                of soccer transfers. Whether it's...
+              </p>             
+            </a>          
+            <div class="comments">
+              <div class="border-div"></div>
+              <div class="comment-flex">
+                <div class="left-comment-flex">
+                  <span style="margin-right: 10px; font-size: 13px;">0 views</span>
+                  <span style="font-size: 13px;">0 comments</span>
+                </div>
+                <div class="right-comment">
+                  <div class="like-container">
+                    <div class="action">
+                      <i class="unlike-heart fa-regular fa-heart" style="color: #bd0a0a;"></i>
+                      <i class="like-heart fa-solid fa-heart"></i>
+                    </div>
+                  <div>
+                  <span>0</span>
+                </div>
+              </div>
+              </div>              
+            </div>          
+          </div>
+          </div>
+        </div> 
+        <div class="post-content-flex">
+          <div>
+            <img src="Images/ball.webp" alt="">
+          </div>
+          <div class="right-post-flex">
+            <p class="time-read">
+              2 min read
+            </p>
+            <a href="02-post.html">
+              <h4>
+                In-Depth Analysis: Key Players Shaping the 
+                Future of Soccer
+              </h4>
+              <p>
+                Soccer enthusiasts around the globe are always on the 
+                lookout for the next big thing in the world of football. 
+                With the start of a new...
+              </p> 
+            </a>
+            
+            <div class="comments">
+              <div class="border-div"></div>
+              <div class="comment-flex">
+                <div class="left-comment-flex">
+                  <span style="margin-right: 10px; font-size: 13px;">0 views</span>
+                  <span style="font-size: 13px;">0 comments</span>
+                </div>
+                <div class="right-comment">
+                  <div class="like-container">
+                    <div class="action">
+                      <i class="unlike-heart fa-regular fa-heart" style="color: #bd0a0a;"></i>
+                      <i class="like-heart fa-solid fa-heart"></i>
+                    </div>
+                  <div>
+                  <span>0</span>
+                </div>
+              </div>
+              </div>              
+            </div>
+            </div>
+          </div>
+          </div>
+
+          <div class="post-content-flex">
+            <div>
+              <img src="Images/players.webp" alt="">
+            </div>
+            <div class="right-post-flex">
+              <p class="time-read">
+                3 min read
+              </p>
+              <a href="03-post.html">
+                <h4>
+                  Top 10 Soccer Teams to Watch in 2021
+                </h4>
+                <p>
+                  Soccer enthusiasts around the globe are 
+                  always on the lookout for the next big 
+                  thing in the world of football. With the 
+                  start of a new...
+                </p> 
+              </a>
+            
+            
+            <div class="comments">
+              <div class="border-div"></div>
+              <div class="comment-flex">
+                <div class="left-comment-flex">
+                  <span style="margin-right: 10px; font-size: 13px;">0 views</span>
+                  <span style="font-size: 13px;">0 comments</span>
+                </div>
+                <div class="right-comment">
+                  <div class="like-container">
+                    <div class="action">
+                      <i class="unlike-heart fa-regular fa-heart" style="color: #bd0a0a;"></i>
+                      <i class="like-heart fa-solid fa-heart"></i>
+                    </div>
+                  <div>
+                  <span>0</span>
+                </div>
+              </div>
+              </div>              
+            </div>
+          </div>            
+      </div>
+    </div>
+  </section>
+ 
+  <footer>
+    <div class="footer-div">
+      <div class="footer-flex">
+        <div class="left-footer-flex">
+          <ul>
+            <li>123-456-7890</li>
+            <a href="#">
+              <li>
+                info@mysite.com
+              </li>
+            </a>
+            <li>
+              500 Terry Francine St. San francisco, CA 94158
+            </li>
+          </ul>
+
+          <div class="list">
+            <ul>
+              <a href="#">
+                <li>
+                  Privacy Policy
+                </li>
+              </a>
+
+              <a href="#">
+                <li>
+                  Accessibility Statement
+                </li>
+              </a>
+            </ul>
+          </div>
+
+          <div class="social-container">
+            <a href="#">
+              <img src="Images/Instagram.png" alt="">
+            </a>
+            <a href="#">
+              <img src="Images/Facebook.png" alt="">
+            </a>
+            <a href="#">
+              <img src="Images/YouTube.png" alt="">
+            </a>
+            <a href="#">
+              <img src="Images/TikTok.png" alt="">
+            </a>
+          </div>
+        </div>
+
+        <div class="right-footer-flex">
+          <h2>
+            Stay Connected!
+          </h2>
+
+          <form>
+            <label for="Email">
+              Email
+            </label><br>
+            <input type="email" name="Email" class="form-email"><br>
+
+            <input type="checkbox" value="Javascript" class="checkbox">
+            <label for="Javascript"> 
+              I agree to terms and conditions
+            </label><br>
+
+            <input type="submit" 
+              value="Submit" class="submit-form">
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-logo">
+      <a href="index.html">
+        <h1>
+          Goal Globe
+        </h1>
+      </a>
+    </div>
+
+    <p>
+      © 2035 by Goal Globe. Powered and secured by <Span style="text-decoration: underline;">
+        <a href="#">
+          Timileyin
+        </a>
+      </Span>
+    </p>
+    </div>    
+  </footer> 
+
+  <script>
+    function showSidebar() {
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display='flex'
+    }
+    function hideSidebar() {
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display='none'
+    }
+
+
+    document.querySelectorAll(".fa-heart").forEach((feedHeartObj) => {
+      feedHeartObj.addEventListener('click',(event)=>{        
+        let classList = event.target.parentElement.classList;
+            
+        var totalLikes = parseInt(event.target.parentElement.nextElementSibling.querySelector('span').innerHTML);
+        if (classList.contains('like')) {
+          totalLikes--;
+          
+        }else {
+          totalLikes++;
+        }
+        // totalLikes = (classList.contains('like'))?--totalLikes:++totalLikes       
+        event.target.parentElement.nextElementSibling.innerHTML ='<span>'+(totalLikes)+'</span>'
+        event.target.parentElement.classList.toggle("like");//add or remove the like class
+      })
+    });    
+
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    let currentPage = window.location.pathname.split('/').pop();
+    if (currentPage === '') {
+      currentPage = 'index.html';
+    }
+    navLinks.forEach(link => {
+      const linkPage = link.getAttribute('href');
+
+      if (linkPage === currentPage) {
+        link.classList.add('active');
+      }
+    });
+
+  </script>  
+</body>
+</html>
+

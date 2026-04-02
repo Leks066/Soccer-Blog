@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <!-- <link rel="stylesheet" href="styles/style.css"> -->
+</head>
+<style> 
+*{
+  padding: 0;
+  margin: 0;
+}
+   
+body {
+  min-height: 100vh;
+  background-color: rgb(177, 226, 0);
+  color: rgb(177, 226, 0);
+  margin-bottom: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+  background-color: rgb(177, 226, 0);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);  
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1000;  
+}
+
+nav h2 {
+  font-size: 20px;
+}
+
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav li {
+  height: 50px;
+}
+
+nav a {
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+nav li:first-child {
+  margin-right: auto;
+} 
+
+.nav-link.active {
+  opacity: 0.3;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 350px;
+  z-index: 999; 
+  background-color: rgb(29, 29, 29);
+  /* backdrop-filter: blur(10px); */
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+} 
+
+.sidebar li {
+  width: 100%;
+  font-size: 50px;
+  font-weight: bold;
+  margin: 25px;
+  margin-left: 50px;
+}
+
+.sidebar a {
+  width: 100%;
+  color: #b1e200;
+}
+
+.menu-button {
+  display: none;
+}
+
+.contact-container {
+  background-color: rgb(29, 29, 29);
+  display: flex;
+  /* justify-content: space-between;   */
+  margin-top: 50px;
+}
+
+.left-contact-flex {
+  margin-bottom: -4px;
+}
+
+.right-contact-flex {
+  padding: 60px 80px;
+  padding-bottom: 0;
+}
+
+.right-contact-flex h3 {
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: -2px;
+}
+
+.right-contact-flex p {
+  margin: 10px 10px 25px 0; 
+  font-size: 17.6px;
+  /* width: 430px; */
+  line-height: 25px;
+}
+
+.right-contact-flex form {
+  margin-bottom: 20px;
+}
+
+.right-contact-flex form {
+  font-size: 16px;
+}
+
+.right-contact-flex input{
+  margin-bottom: 10px;
+}
+
+.right-contact-flex input {
+  background-color: rgb(51, 53, 27);
+  border: 1px solid rgb(177, 226, 0);
+  padding: 10px;
+  width: 480px;
+  border-radius: 30px;
+  margin-top: 10px;
+  margin-bottom: 20px;  
+  color: #b1e200;
+  font-size: 18px;
+}
+
+.right-contact-flex input:hover {
+  background-color: rgb(68, 71, 36);
+}
+
+.right-contact-flex .message {
+  background-color: rgb(51, 53, 27);
+  border: 1px solid rgb(177, 226, 0);
+  padding: 10px;
+  width: 480px;
+  height: 80px;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-bottom: 0;  
+}
+
+.right-contact-flex .submit {
+  background-color: rgb(29, 29, 29);
+  border: 3px solid rgb(177, 226, 0);
+  /* padding: 13px; */
+  width: 500px;
+  border-radius: 30px;
+  color: rgb(177, 226, 0);
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color, color 1s;
+}
+
+.right-contact-flex .submit:hover {
+  background-color: rgb(177, 226, 0);
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.footer-div {
+  margin-top: 10px;
+  background-color: rgb(29, 29, 29);
+  color: rgb(177, 226, 0);
+  padding: 50px;
+}
+
+.footer-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-div ul {
+  list-style: none;
+  padding: 15px;
+  line-height: 35px;
+  font-size: 18px;
+}
+
+.footer-div a {
+  text-decoration: none;
+  color: rgb(177, 226, 0);
+}
+
+.left-footer-flex .social-container{
+  margin: 30px 11px;
+}
+
+.right-footer-flex h2 {
+  padding-bottom: 10px;
+  font-size: 45px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.right-footer-flex {
+  padding: 10px;
+  
+}
+
+.right-footer-flex form {
+  font-size: 18px;
+}
+
+.right-footer-flex input{
+  margin-bottom: 10px;
+}
+
+.right-footer-flex .form-email {
+  background-color: rgb(51, 53, 27);
+  border: 1px solid rgb(177, 226, 0);
+  padding: 10px;
+  width: 480px;
+  border-radius: 30px;
+  margin-top: 10px;
+  margin-bottom: 20px;  
+  color: #b1e200;
+  font-size: 18px;
+}
+
+.right-footer-flex .form-email:hover {
+  background-color: rgb(68, 71, 36);
+}
+
+.submit-form {
+  background-color: rgb(29, 29, 29);
+  border: 3px solid rgb(177, 226, 0);
+  padding: 13px;
+  width: 510px;
+  border-radius: 30px;
+  color: rgb(177, 226, 0);
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.9;
+}
+
+.submit-form:hover {
+  background-color: rgb(177, 226, 0);
+  color: black;
+  /* font-weight: 900; */
+  font-size: 20px;
+}
+
+.footer-logo {
+  font-size: 80px;
+  text-align: center;
+  margin-top: -30px;
+}
+
+/* MEDIA SCREEN */
+@media(max-width: 800px) {
+  .hideOnMobile {
+    display: none;
+  }
+  .menu-button {
+    display: block;
+    /* margin-left: 60px; */
+  }
+  
+  .sidebar {
+    width: 100%;
+  }
+  
+  .nav-link.active {
+    opacity: 0.4;
+  }
+
+  html,body {
+    overflow-x: hidden;
+  }
+  
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    /* padding: 40px; */
+  }
+
+  .left-contact-flex,
+  .right-contact-flex {
+    flex: 1;
+  }
+
+  .left-contact-flex img{
+    width: 100%;
+  }
+
+  .right-contact-flex {
+    width: 100%;
+    padding: 15px;    
+    place-items: center;
+    margin: auto;
+  }
+
+  .right-contact-flex input,
+  .right-contact-flex .message,
+  .right-contact-flex .submit {
+    width: 330px;
+  }
+
+  .footer-flex {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .right-footer-flex,
+  .left-footer-flex {
+    width: 85%;
+  }
+
+  .left-footer-flex ul,
+  .list,
+  .social-container{
+    margin-bottom: -25px;
+    font-weight: 500;
+
+  }
+
+  .footer-flex li {
+    font-size: 17px;
+  }
+
+  .footer-flex h2 {
+    font-size: 32px;
+  }
+
+  .submit-form,
+  .right-footer-flex .form-email  {
+    width: 300px;
+    margin-bottom: 0;
+  }
+
+  .footer-logo {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 2px;
+    margin-bottom: 5px;
+  }
+
+} 
+
+/* @media (min-width: 1024px) {
+  .right-contact-flex h3 {
+    font-size: 48px;
+  }
+
+  .footer-logo {
+    font-size: 120px;
+  }
+}
+
+nav a {
+  text-decoration: none;
+  color: #222;
+  padding: 8px 14px;
+  display: inline-block;
+}
+
+.sidebar .nav-link {
+  width: 100%;
+}
+
+
+.nav-link.active {
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 6px;
+}
+
+
+.nav-link:hover {
+  background-color: rgba(0, 123, 255, 0.15);
+}
+
+
+.nav-link.active:hover {
+  background-color: #007bff;
+} */
+
+</style>
+<body>
+  <nav>
+    <ul class="sidebar">
+      <li onclick="hideSidebar()"><a href="#">
+        <img style="margin-left: 180px; width: 40px;" src="Images/close.png" alt="">
+      </a></li>
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="blog.html" class="nav-link">Blog</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <ul>
+      <li><a href="index.html">
+        <h2>Globe Goal</h2>
+      </a></li>
+      <!-- <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Blog</a></li> -->
+      <li onclick="showSidebar()" class="hideOnMobile"><a href="#">
+        <h2>Menu</h2>
+      </a></li>
+      <li class="menu-button" onclick="showSidebar()" ><a href="#">
+        <img src="Images/menu.png" alt="">
+      </a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <div class="contact-container">
+      <div class="left-contact-flex">
+        <img src="Images/contact-img.jpg" alt="">        
+      </div>
+      <div class="right-contact-flex">
+        <h3>          
+          Get In Touch
+        </h3>
+        <p>
+          We would love to have you on our team!
+        </p>
+
+        <form>
+          <label for="fname">
+            First name *
+          </label><br>
+          <input type="text" required=""><br>
+
+          <label for="Lname">
+            Last name *
+          </label><br>
+          <input type="text" required=""><br>
+
+          <label for="Email">
+            Email *
+          </label><br>
+          <input type="email" required=""><br>
+
+          <label for="pnumber">
+            Phone 
+          </label><br>
+          <input type="number" required=""><br>
+
+          <label for="Message">
+            Message
+          </label><br>
+          <input type="text" class="message" required=""><br>
+          <input type="submit" class="submit">
+        </form>
+        
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-div">
+      <div class="footer-flex">
+        <div class="left-footer-flex">
+          <ul>
+            <li>123-456-7890</li>
+            <a href="#">
+              <li>
+                info@mysite.com
+              </li>
+            </a>
+            <li>
+              500 Terry Francine St. San francisco, CA 94158
+            </li>
+          </ul>
+
+          <div class="list">
+            <ul>
+              <a href="#">
+                <li>
+                  Privacy Policy
+                </li>
+              </a>
+
+              <a href="#">
+                <li>
+                  Accessibility Statement
+                </li>
+              </a>
+            </ul>
+          </div>
+
+          <div class="social-container">
+            <a href="#">
+              <img src="Images/Instagram.png" alt="">
+            </a>
+            <a href="#">
+              <img src="Images/Facebook.png" alt="">
+            </a>
+            <a href="#">
+              <img src="Images/YouTube.png" alt="">
+            </a>
+            <a href="#">
+              <img src="Images/TikTok.png" alt="">
+            </a>
+          </div>
+        </div>
+
+        <div class="right-footer-flex">
+          <h2>
+            Stay Connected!
+          </h2>
+
+          <form>
+            <label for="Email">
+              Email
+            </label><br>
+            <input type="email" name="Email" class="form-email"><br>
+
+            <input type="checkbox" value="Javascript" class="checkbox">
+            <label for="Javascript"> 
+              I agree to terms and conditions
+            </label><br>
+
+            <input type="submit" 
+              value="Submit" class="submit-form">
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-logo">
+      <a href="index.html">
+        <h1>
+          Goal Globe
+        </h1>
+      </a>
+    </div>
+
+    <p>
+      © 2035 by Goal Globe. Powered and secured by <Span style="text-decoration: underline;">
+        <a href="#">
+          Timileyin
+        </a>
+      </Span>
+    </p>
+    </div>    
+  </footer>
+
+  <script>
+    function showSidebar() {
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display='flex'
+    }
+    function hideSidebar() {
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display='none'
+    }
+
+    const navLinks = document.querySelectorAll('.nav-link');
+    let currentPage = window.location.pathname.split('/').pop();
+    if (currentPage === '') {
+      currentPage = 'index.html';
+    }
+    navLinks.forEach(link => {
+      const linkPage = link.getAttribute('href');
+
+      if (linkPage === currentPage) {
+        link.classList.add('active');
+      }
+    });
+    
+  </script>  
+</body>
+</html>
